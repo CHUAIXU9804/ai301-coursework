@@ -33,19 +33,13 @@ Summary
 
 Repo-level facts (apply to all three issues): codepath/pathreview-ai301-fa26-s1 is not archived, pushed 2026-09-16 (4 days ago), 5 recent commits by a human author (Aburke225, most recent 2026-09-16 — well within 30 days). No CONTRIBUTING.md, no AI policy file found (404s on all checked paths) → silence passes. All three issues have zero comments, zero assignees, and no linked/cross-referenced PRs.
 
-┌────────────────────────┬──────────────┬───────────┬─────────┬─────────────────┬───────────┬─────────┐
-│         Issue          │  Community   │ Unclaimed │ Repo in │  Contribution   │  Scope    │ Verdict │
-│                        │    Alive        Policy      │  (pref)   │         │
-├────────────────────────┼──────────────┼───────────┼─────────┼─────────────────┼───────────┼─────────┤
-│ #61 SQLAlchemy text()  │ pass         | pass            │ pass      │ accept  │
-│ fix                    │              │           │         │                 │           │         │
-├────────────────────────┼─────────────────────────────┼───────────┼─────────┤
-│ #59 Faithfulness       │ pass         │ pass      │ pass    │ pass            │ pass      │ accept  │
-│ checker wording        │                             │           │         │
-├────────────────────────┼──────────────┼───────────┼─────────┼─────────────────┼───────────┼─────────┤
-│ #57 Tech detector      │ pass         | pass            │ pass      │ accept  │
-│ vendored files         │              │           │         │                 │           │         │
-└────────────────────────┴─────────────────────────────┴───────────┴─────────┘
+┌──────────────────────────────────┬─────────────────┬───────────┬─────────────┬─────────────────────┬──────────────┬─────────┐
+│              Issue               │ Community Alive │ Unclaimed │ Repo in Use │ Contribution Policy │ Scope (pref) │ Verdict │
+├──────────────────────────────────┼─────────────────┼───────────┼─────────────┼─────────────────────┼──────────────┼─────────┤
+│ #61 SQLAlchemy text() fix        │      pass       │   pass    │    pass     │        pass         │     pass     │ accept  │
+│ #59 Faithfulness checker wording │      pass       │   pass    │    pass     │        pass         │     pass     │ accept  │
+│ #57 Tech detector vendored files │      pass       │   pass    │    pass     │        pass         │     pass     │ accept  │
+└──────────────────────────────────┴─────────────────┴───────────┴─────────────┴─────────────────────┴──────────────┴─────────┘
 
 All three clear every required check. Rabackground, wants backend experience,open to moderate challenge):
 
@@ -157,13 +151,13 @@ This is also the basis for the claim comment you write in Unit 2.
 2. What the verdict identified correctly, and what you weighed that the rubric could
    not.
 3. The anticipated difficulty in claiming it.
-   ]
+]
 
-4. The issue fits to my interest because it works with the Python backend logic in the RAG pipeline. It's a bit more challenging compare to the other two issues I looked at, but I like to take on challenges
+1. The issue fits to my interest because it works with the Python backend logic in the RAG pipeline. It's a bit more challenging compare to the other two issues I looked at, but I like to take on challenges
 
-5. The verdict identified correctly that the issue is tied to one isolated function and one failed test. I weighed that as preferred because I think it large depends on the developer's skill level and preferences, so it should not be a "mandatory requirement"
+2. The verdict identified correctly that the issue is tied to one isolated function and one failed test. I weighed that as preferred because I think it large depends on the developer's skill level and preferences, so it should not be a "mandatory requirement"
 
-6. It's still labeled as a tier-1 challenge, should still be doable
+3. It's still labeled as a tier-1 challenge, should still be doable
 
 ---
 
