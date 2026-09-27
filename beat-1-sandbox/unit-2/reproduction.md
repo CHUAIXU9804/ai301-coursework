@@ -16,6 +16,8 @@ label is not graded.
 **GitHub username**
 [Your GitHub username, exactly as it appears on your profile — no `@`, no profile URL. Your
 comments upstream are identified by this name.]
+
+
 CHUAIXU9804
 
 ---
@@ -29,6 +31,7 @@ issue page on its own. **Then paste the text of that comment underneath the link
 pasted text is what this field is graded on, so copy across what you actually posted.]
 https://github.com/codepath/pathreview-ai301-fa26-s1/issues/59#issuecomment-5860350327
 
+
 Hi! I'd like to work on reproducing this issue. I'll test the faithfulness checker with claims and contexts that express the same or similar meaning using different wording, including the example described in the issue. I'll document my environment, reproduction steps, and observed behavior, and follow up here with my findings.
 
 **Reproduction comment**
@@ -37,7 +40,10 @@ Hi! I'd like to work on reproducing this issue. I'll test the faithfulness check
 (OS, relevant versions, code state), steps a stranger could follow, and what you observed.
 **Then paste the text of that comment underneath the link** — the pasted text is what this
 field is graded on, so copy across what you actually posted.]
+
+
 https://github.com/codepath/pathreview-ai301-fa26-s1/issues/59#issuecomment-5860688842
+
 
 ## Environment
 
