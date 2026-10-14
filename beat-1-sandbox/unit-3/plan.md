@@ -5,9 +5,7 @@
 ## Diagnosis
 
 The reported bug occurs when when feedback contains punctuation attached to key skill words (for example "Python, JavaScript, and Docker experience") and the context uses the same words without that punctuation. The checker scores the claim as unsupported even though every skill is present in the context.`test_multiple_context_chunks` returns `0.0` instead of a score above 0.5.
-
 The likely root cause is the tokenization and threshold logic in `FaithfulnessChecker._is_supported` in `rag/evaluator/faithfulness_checker.py`.
-
 The claim and context are tokenized with a bare `.split()`, so punctuation stays attached to words (`"python,"` ≠ `"python"`, `"javascript,"` ≠ `"javascript"`). Those tokens never match the context. The stop-word filter then removes `"and"`, which leaves a single meaningful overlap (`docker`). That is below the hard-coded threshold of 2 (`len(meaningful_overlap) >= 2`), so the claim is rejected. The threshold has no fallback for short claims that have few content words. A secondary contributor is `_extract_claims`, which drops fragments of 10 characters or fewer, so very short claims such as "Knows Rust" never reach scoring.
 
 ### Reproduction Evidence
@@ -15,9 +13,9 @@ The claim and context are tokenized with a bare `.split()`, so punctuation stays
 From my Unit 2 reproduction report:
 
 > **Steps:** Ran `pytest tests/unit/test_faithfulness_checker.py::TestFaithfulnessChecker::test_multiple_context_chunks --runxfail -v` to check details specifically for the test_multiple_context_chunks function.
->
+
 > **Expected:** The test provides context describing Python, JavaScript, and Docker experience. The faithfulness checker should recognize the feedback describing those same skills as supported, resulting in a score greater than 0.5.
->
+
 > **Actual:** The test failed because the checker returned a score of `0.0`: `E assert 0.0 > 0.5`. The captured output also reported: `claims_count=1 score=0.0 supported_count=0`.
 
 Control case:
@@ -81,4 +79,6 @@ These observations support the diagnosis because the only difference between the
 
 ## Deviations
 
-The implementation followed the original plan. No changes to the proposed approach or scope were necessary. The partial-support test remains marked as an expected failure because clause-level splitting is outside the scope of issue #59.
+Added `list[dict]` type annotations to the empty `context_chunks` lists in `test_empty_context_chunks_returns_zero` and `test_both_empty_returns_zero`. These annotations are required for the repository's `mypy` pre-commit check, which otherwise fails with `[var-annotated]` errors. They do not change test behavior.
+
+All other implementation changes followed the plan.
