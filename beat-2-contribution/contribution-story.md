@@ -8,10 +8,10 @@ format criteria grade exactly that. Your course repo link is the whole submissio
 files and no evidence uploads are part of Assignment 5.
 
 **Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
+**Student:** Crystal Xu
+**GitHub Username:** CHUAIXU9804
+**Issue:** https://github.com/apache/beam/issues/19125
+https://github.com/Clawdlinux/agentic-operator-core/issues/133
 **Pull Request:** [GitHub PR link, once opened]
 
 One repository, built across units 5 to 8, telling the whole story of your real
@@ -57,8 +57,7 @@ one in the week it belongs to.
 
 **Unit 5: [one line on the tool work]**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I configured an issue-scout skill with GitHub search queries, ranking filters, with the pre-existing grading rubric to find open-source issues aligned with my Python and API interests. My initial scan prioritized mostly documentation-related issues, so I revised the ranking preferences, but the second scan still returned the same five candidates. I used the AI 301 issue selection page, found two issues I'm interested to work on. Then I used the same issue scout skill to grade the two additional issues, it revealed that the rubric could accept outdated issues. I would further improve the ranking criteria and add checks for issue freshness and implementation complexity.
 
 **Unit 6: [one line on the tool work]**
 
